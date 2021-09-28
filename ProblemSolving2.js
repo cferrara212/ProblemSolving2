@@ -74,7 +74,8 @@
 
 //             ////// I have also decided to condence splitting the numbers and squaring them into one line of code.
 
-            console.log(isHappyNumber(19));
+            let myHappyNumber= isHappyNumber(19);
+            console.log(myHappyNumber);
 
                     function isHappyNumber (numberToCheck,counter=0)
                     {
@@ -87,8 +88,8 @@
                                if ( numbersAdded === 1)
                                {
                                    
-                                   counter=20
-                                   return isHappy=true;
+                                   isHappy=true
+                                   return;
                                }
                                else
                                {
@@ -135,3 +136,24 @@ let primes= allPrimesInRange(0,100);
                          }  
                       }
                   }
+
+
+
+//////
+//////3.Fibonacci
+//////a.A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
+//////b.Write a method that does the Fibonacci sequence starting at 1
+//////c.HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user inputs
+
+
+let fib = [];
+
+fib[0] = 0;
+fib[1] = 1;
+for (let i = 2; i <= 10; i++)
+ {
+  // Next fibonacci number = previous + one before previous
+  // Translated to JavaScript:
+  fib[i] = fib[i - 2] + fib[i - 1];
+  console.log(fib[i]);
+}
